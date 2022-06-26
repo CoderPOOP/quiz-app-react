@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #16BFFD;
+  background: -webkit-linear-gradient(to right, #ffc1d7, #16BFFD);
+  background: linear-gradient(to right, #ffc1d7, #16BFFD);
+}
+
+* {
+  font-family: "Open Sans", cursive, sans-serif;
+  font-weight: normal;
+  color: black;
+}
+
+body {
+  background-color: #f2f9ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: all 1s;
+}
+
+.app {
+  width: 450px;
+  min-height: 200px;
+  height: min-content;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  display: flex;
+  justify-content: space-evenly;
+  transition: all 2s;
+  background: #ff4b1f;
+  background: -webkit-linear-gradient(to right, #687fff, #e51fff);
+  background: linear-gradient(to right, #687fff, #e51fff);
+  border: 1px solid black;
+  border-radius: 40px;
+}
+
+.animate-character {
+  text-transform: uppercase;
+  background-image: linear-gradient(-300deg,
+      #231557 0%,
+      #44107a 29%,
+      #ff1361 67%,
+      #aca969 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  font-size: 190px;
+}
+
+.heading {
+  font-size: 35px;
+  text-align: center;
+  line-height: 1em;
+  font-family: 'Sora', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  color: rgb(0, 0, 0);
+}
+
+.score-section {
+  display: flex;
+  font-size: 24px;
+  align-items: center;
+  transition: all 1s;
+}
+
+/* QUESTION/TIMER/LEFT SECTION */
+.question-section {
+  width: 100%;
+  position: relative;
+  transition: all 1s;
+}
+
+.question-count {
+  margin-bottom: 20px;
+}
+
+.question-count span {
+  font-size: 28px;
+}
+
+.question-text {
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: larger;
+}
+
+.timer-text {
+  background: rgb(230, 153, 12);
+  padding: 15px;
+  margin-top: 20px;
+  margin-right: 20px;
+  border: 5px solid rgb(255, 189, 67);
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* ANSWERS/RIGHT SECTION */
+.answer-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 1s;
+}
+
+button {
+  width: 100%;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #252d4a;
+  border-radius: 15px;
+  display: flex;
+  padding: 5px;
+  justify-content: flex-start;
+  align-items: center;
+  border: 5px solid #234668;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.correct {
+  background-color: #2f922f;
+  transition: all 1s;
+}
+
+.incorrect {
+  background-color: #ff3333;
+  transition: all 1s;
+}
+
+button:hover {
+  background-color: #1d1020;
+  transition: all 0.8s;
+}
+
+button:focus {
+  outline: none;
+}
+
+button svg {
+  margin-right: 5px;
+}
+
+/* ANIMATIONS */
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
